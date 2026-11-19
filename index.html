@@ -506,6 +506,7 @@ footer { margin-top: 3rem; }
         <li><b>Wörter</b> sind Wortformen, Zahlen und Abkürzungen. <b>Buchstaben</b> sind nur Schriftzeichen von Alphabeten. <b>Zeichen</b> ist alles ausser Leerzeichen.</li>
         <li><b>Funktionswörter ausblenden</b> wirkt nur auf die Liste der häufigsten Wörter. Alle anderen Zahlen zählen immer sämtliche Wörter. Die Liste der Funktionswörter deckt Standarddeutsch und gängige schweizerdeutsche Schreibungen ab, aber nicht jede Dialektvariante.</li>
         <li><b>Zeitraum:</b> Ist ein Zeitraum eingegrenzt, zählen überall nur die Nachrichten vom ersten bis und mit dem letzten gewählten Tag. Das gilt auch für Belege, Downloads und hinterlegte Beispielchats.</li>
+        <li><b>Anonymisierungsmarken</b> wie [anonymisiert NAME] oder [Name gelöscht] zählen als ein Wort, aber nicht als Buchstaben, Zeichen oder Klammern. In der Liste der häufigsten Wörter fehlen sie, N-Gramme reichen nicht über sie hinweg. Eine Nachricht, die nur aus [gelöscht] besteht, gilt als gelöschte Nachricht.</li>
         <li><b>Tokens und Types:</b> Tokens sind alle Wörter, Zahlen und Abkürzungen, Types die verschiedenen Formen ohne Unterschied von Gross- und Kleinschreibung. Das Type-Token-Verhältnis sinkt mit der Textlänge. Der gemittelte Wert je 100 Tokens ist zwischen verschieden langen Chats vergleichbar.</li>
         <li><b>N-Gramme:</b> Folgen von zwei bis vier Einheiten innerhalb einer Nachricht, nie über Nachrichtengrenzen hinweg. Ohne die Option für Zeichen werden Satz- und Bildzeichen übersprungen, die Wörter davor und danach gelten dann als benachbart.</li>
         <li><b>KWIC-Ansicht:</b> Jeder Treffer steht in einer Zeile, links und rechts davon der Rest der Nachricht und, je nach Einstellung, die Nachrichten davor und danach. Hat eine Nachricht mehrere Treffer, bekommt jeder eine eigene Zeile. Die Sortierung nach linkem Kontext geht vom Wort direkt vor dem Treffer aus.</li>
@@ -531,7 +532,7 @@ footer { margin-top: 3rem; }
 
 </main>
 
-<script type="text/plain" id="demo1" data-title="Jugend-Basketball-Team">
+<script type="text/plain" id="demo1" data-title="Team ohne Trainerin">
 12.01.22, 20:36 - Nachrichten und Anrufe sind Ende-zu-Ende-verschlüsselt. Niemand außerhalb dieses Chats kann sie lesen oder anhören, nicht einmal WhatsApp. Tippe, um mehr zu erfahren.
 12.01.22, 20:18 - ‎Cansiu hat die Gruppe „Basketgang“ erstellt
 12.01.22, 20:36 - ‎Gordana hat dich hinzugefügt.
@@ -10852,7 +10853,7 @@ Richtigi Päss
 26.10.22, 17:43 - Erica: Ich
 26.10.22, 18:11 - Dilara: JAMAN
 </script>
-<script type="text/plain" id="demo2" data-title="Jugend-Basketball-Team mit Trainerin">
+<script type="text/plain" id="demo2" data-title="Team mit Trainerin">
 [19.10.22, 20:50:04] DU14: ‎Nachrichten und Anrufe sind Ende-zu-Ende-verschlüsselt. Niemand außerhalb dieses Chats kann sie lesen oder anhören, nicht einmal WhatsApp.
 [19.10.22, 20:50:04] ‎Tanja hat die Gruppe „DU14“ erstellt.
 [19.10.22, 20:50:05] ‎Tanja hat dich hinzugefügt.
@@ -10911,7 +10912,7 @@ Richtigi Päss
 [21.10.22, 19:49:35] Trainerin: Genau das meinte ich ☝🏻🙄
 Bitte ein bisschen konzentrieren beim verschicken. Sonst können wir die gruppen auch anders nennen, dass es klar ist
 [21.10.22, 19:54:10] Naila: 😂😂😂
-[21.10.22, 20:04:31] Anonymer User: [gelöscht] 
+[21.10.22, 20:04:31] Anonymer User: [gelöscht]
 </script>
 <script id="data">
 const EMOJI_DATA = {"gesicht":"😀 😃 😄 😁 😆 😅 🤣 😂 🙂 🙃 🫠 🫫 😉 😊 😇 🥰 😍 🤩 😘 😗 ☺ 😚 😙 🥲 😋 😛 😜 🤪 😝 🤑 🤗 🤭 🫢 🫣 🤫 🤔 🫡 🤐 🤨 😐 😑 😶 🫥 😶‍🌫 😏 😒 🙄 😬 😮‍💨 🤥 🫨 🙂‍↔ 🙂‍↕ 😌 😔 😪 🤤 😴 🫩 😷 🤒 🤕 🤢 🤮 🤧 🥵 🥶 🥴 😵 😵‍💫 🤯 🤠 🥳 🥸 😎 🤓 🧐 😕 🫤 😟 🙁 ☹ 😮 😯 😲 😳 🫪 🥺 🥹 😦 😧 😨 😰 😥 😢 😭 😱 😖 😣 😞 😓 😩 😫 🥱 😤 😡 😠 🤬 😈 👿 💀 ☠ 💩 🤡 👹 👺 👻 👽 👾 🤖 😺 😸 😹 😻 😼 😽 🙀 😿 😾 🙈 🙉 🙊","herz":"💌 💘 💝 💖 💗 💓 💞 💕 💟 ❣ 💔 ❤‍🔥 ❤‍🩹 ❤ 🩷 🧡 💛 💚 💙 🩵 💜 🤎 🖤 🩶 🤍 💋 💯 💢 🫯 💥 💫 💦 💨 🕳 💬 👁‍🗨 🗨 🗯 💭 💤","geste":"👋 🤚 🖐 ✋ 🖖 🫱 🫲 🫳 🫴 🫷 🫸 👌 🤌 🤏 ✌ 🤞 🫰 🤟 🤘 🤙 👈 👉 👆 🖕 👇 ☝ 🫵 👍 👎 🫹 🫺 ✊ 👊 🤛 🤜 👏 🙌 🫶 👐 🤲 🤝 🙏 ✍ 💅 🤳 💪 🦾 🦿 🦵 🦶 👂 🦻 👃 🧠 🫀 🫁 🦷 🦴 👀 👁 👅 👄 🫦 🙍 🙍‍♂ 🙍‍♀ 🙎 🙎‍♂ 🙎‍♀ 🙅 🙅‍♂ 🙅‍♀ 🙆 🙆‍♂ 🙆‍♀ 💁 💁‍♂ 💁‍♀ 🙋 🙋‍♂ 🙋‍♀ 🧏 🧏‍♂ 🧏‍♀ 🙇 🙇‍♂ 🙇‍♀ 🤦 🤦‍♂ 🤦‍♀ 🤷 🤷‍♂ 🤷‍♀","person":"👶 🧒 👦 👧 🧑 👱 👨 🧔 🧔‍♂ 🧔‍♀ 👨‍🦰 👨‍🦱 👨‍🦳 👨‍🦲 👩 👩‍🦰 🧑‍🦰 👩‍🦱 🧑‍🦱 👩‍🦳 🧑‍🦳 👩‍🦲 🧑‍🦲 👱‍♀ 👱‍♂ 🧓 👴 👵 🧑‍⚕ 👨‍⚕ 👩‍⚕ 🧑‍🎓 👨‍🎓 👩‍🎓 🧑‍🏫 👨‍🏫 👩‍🏫 🧑‍⚖ 👨‍⚖ 👩‍⚖ 🧑‍🌾 👨‍🌾 👩‍🌾 🧑‍🍳 👨‍🍳 👩‍🍳 🧑‍🔧 👨‍🔧 👩‍🔧 🧑‍🏭 👨‍🏭 👩‍🏭 🧑‍💼 👨‍💼 👩‍💼 🧑‍🔬 👨‍🔬 👩‍🔬 🧑‍💻 👨‍💻 👩‍💻 🧑‍🎤 👨‍🎤 👩‍🎤 🧑‍🎨 👨‍🎨 👩‍🎨 🧑‍✈ 👨‍✈ 👩‍✈ 🧑‍🚀 👨‍🚀 👩‍🚀 🧑‍🚒 👨‍🚒 👩‍🚒 👮 👮‍♂ 👮‍♀ 🕵 🕵‍♂ 🕵‍♀ 💂 💂‍♂ 💂‍♀ 🥷 👷 👷‍♂ 👷‍♀ 🫅 🤴 👸 👳 👳‍♂ 👳‍♀ 👲 🧕 🤵 🤵‍♂ 🤵‍♀ 👰 👰‍♂ 👰‍♀ 🤰 🫃 🫄 🤱 👩‍🍼 👨‍🍼 🧑‍🍼 👼 🎅 🤶 🧑‍🎄 🦸 🦸‍♂ 🦸‍♀ 🦹 🦹‍♂ 🦹‍♀ 🧙 🧙‍♂ 🧙‍♀ 🧚 🧚‍♂ 🧚‍♀ 🧛 🧛‍♂ 🧛‍♀ 🧜 🧜‍♂ 🧜‍♀ 🧝 🧝‍♂ 🧝‍♀ 🧞 🧞‍♂ 🧞‍♀ 🧟 🧟‍♂ 🧟‍♀ 🧌 🫈 💆 💆‍♂ 💆‍♀ 💇 💇‍♂ 💇‍♀ 🚶 🚶‍♂ 🚶‍♀ 🚶‍➡ 🚶‍♀‍➡ 🚶‍♂‍➡ 🧍 🧍‍♂ 🧍‍♀ 🧎 🧎‍♂ 🧎‍♀ 🧎‍➡ 🧎‍♀‍➡ 🧎‍♂‍➡ 🧑‍🦯 🧑‍🦯‍➡ 👨‍🦯 👨‍🦯‍➡ 👩‍🦯 👩‍🦯‍➡ 🧑‍🦼 🧑‍🦼‍➡ 👨‍🦼 👨‍🦼‍➡ 👩‍🦼 👩‍🦼‍➡ 🧑‍🦽 🧑‍🦽‍➡ 👨‍🦽 👨‍🦽‍➡ 👩‍🦽 👩‍🦽‍➡ 🏃 🏃‍♂ 🏃‍♀ 🏃‍➡ 🏃‍♀‍➡ 🏃‍♂‍➡ 🧑‍🩰 💃 🕺 🕴 👯 👯‍♂ 👯‍♀ 🧖 🧖‍♂ 🧖‍♀ 🧗 🧗‍♂ 🧗‍♀ 🤺 🏇 ⛷ 🏂 🏌 🏌‍♂ 🏌‍♀ 🏄 🏄‍♂ 🏄‍♀ 🚣 🚣‍♂ 🚣‍♀ 🏊 🏊‍♂ 🏊‍♀ ⛹ ⛹‍♂ ⛹‍♀ 🏋 🏋‍♂ 🏋‍♀ 🚴 🚴‍♂ 🚴‍♀ 🚵 🚵‍♂ 🚵‍♀ 🤸 🤸‍♂ 🤸‍♀ 🤼 🤼‍♂ 🤼‍♀ 🤽 🤽‍♂ 🤽‍♀ 🤾 🤾‍♂ 🤾‍♀ 🤹 🤹‍♂ 🤹‍♀ 🧘 🧘‍♂ 🧘‍♀ 🛀 🛌 🧑‍🤝‍🧑 👭 👫 👬 💏 👩‍❤‍💋‍👨 👨‍❤‍💋‍👨 👩‍❤‍💋‍👩 💑 👩‍❤‍👨 👨‍❤‍👨 👩‍❤‍👩 👨‍👩‍👦 👨‍👩‍👧 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧 👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦 👩‍👩‍👧‍👧 👨‍👦 👨‍👦‍👦 👨‍👧 👨‍👧‍👦 👨‍👧‍👧 👩‍👦 👩‍👦‍👦 👩‍👧 👩‍👧‍👦 👩‍👧‍👧 🗣 👤 👥 🫂 👪 🧑‍🧑‍🧒 🧑‍🧑‍🧒‍🧒 🧑‍🧒 🧑‍🧒‍🧒 👣 🫆","natur":"🐵 🐒 🦍 🦧 🐶 🐕 🦮 🐕‍🦺 🐩 🐺 🦊 🦝 🐱 🐈 🐈‍⬛ 🦁 🐯 🐅 🐆 🐴 🫎 🫏 🐎 🦄 🦓 🦌 🦬 🐮 🐂 🐃 🐄 🐷 🐖 🐗 🐽 🐏 🐑 🐐 🐪 🐫 🦙 🦒 🐘 🦣 🦏 🦛 🐭 🐁 🐀 🐹 🐰 🐇 🐿 🦫 🦔 🦇 🐻 🐻‍❄ 🐨 🐼 🦥 🦦 🦨 🦘 🦡 🐾 🦃 🐔 🐓 🐣 🐤 🐥 🐦 🐧 🕊 🦅 🦆 🦢 🦉 🦤 🪶 🦩 🦚 🦜 🪽 🐦‍⬛ 🪿 🐦‍🔥 🐸 🐊 🐢 🦎 🐍 🐲 🐉 🦕 🦖 🐳 🐋 🐬 🫍 🦭 🐟 🐠 🐡 🦈 🐙 🐚 🪸 🪼 🦀 🦞 🦐 🦑 🦪 🐌 🦋 🫌 🐛 🐜 🐝 🪲 🐞 🦗 🪳 🕷 🕸 🦂 🦟 🪰 🪱 🦠 💐 🌸 💮 🪷 🏵 🌹 🥀 🌺 🌻 🌼 🌷 🪻 🌱 🪴 🌲 🌳 🌴 🌵 🌾 🌿 ☘ 🍀 🍁 🍂 🍃 🪹 🪺 🍄 🪾","essen":"🍇 🍈 🍉 🍊 🍋 🍋‍🟩 🍌 🍍 🥭 🍎 🍏 🍐 🍑 🍒 🍓 🫐 🥝 🍅 🫒 🥥 🥑 🍆 🥔 🥕 🌽 🌶 🫑 🥒 🫝 🥬 🥦 🧄 🧅 🥜 🫘 🌰 🫚 🫛 🍄‍🟫 🫜 🍞 🥐 🥖 🫓 🥨 🥯 🥞 🧇 🧀 🍖 🍗 🥩 🥓 🍔 🍟 🍕 🌭 🥪 🌮 🌯 🫔 🥙 🧆 🥚 🍳 🥘 🍲 🫕 🥣 🥗 🍿 🧈 🧂 🥫 🍱 🍘 🍙 🍚 🍛 🍜 🍝 🍠 🍢 🍣 🍤 🍥 🥮 🍡 🥟 🥠 🥡 🍦 🍧 🍨 🍩 🍪 🎂 🍰 🧁 🥧 🍫 🍬 🍭 🍮 🍯 🍼 🥛 ☕ 🫖 🍵 🍶 🍾 🍷 🍸 🍹 🍺 🍻 🥂 🥃 🫗 🥤 🧋 🧃 🧉 🧊 🥢 🍽 🍴 🥄 🔪 🫙 🏺","reise":"🌍 🌎 🌏 🌐 🗺 🗾 🧭 🏔 ⛰ 🛘 🌋 🗻 🏕 🏖 🏜 🏝 🏞 🏟 🏛 🏗 🧱 🪨 🪵 🛖 🏘 🏚 🏠 🏡 🏢 🏣 🏤 🏥 🏦 🏨 🏩 🏪 🏫 🏬 🏭 🏯 🏰 💒 🗼 🗽 ⛪ 🕌 🛕 🕍 ⛩ 🕋 ⛲ ⛺ 🌁 🌃 🏙 🌄 🌅 🌆 🌇 🌉 ♨ 🎠 🛝 🎡 🎢 💈 🎪 🚂 🚃 🚄 🚅 🚆 🚇 🚈 🚉 🚊 🚝 🚞 🚋 🚌 🚍 🚎 🚐 🚑 🚒 🚓 🚔 🚕 🚖 🚗 🚘 🚙 🛻 🚚 🚛 🚜 🏎 🏍 🛵 🦽 🦼 🛺 🚲 🛴 🛹 🛼 🚏 🛣 🛤 🛢 ⛽ 🛞 🚨 🚥 🚦 🛑 🚧 🛙 ⚓ 🛟 ⛵ 🛶 🚤 🛳 ⛴ 🛥 🚢 ✈ 🛩 🛫 🛬 🪂 💺 🚁 🚟 🚠 🚡 🛰 🚀 🛸 🛎 🧳 ⌛ ⏳ ⌚ ⏰ ⏱ ⏲ 🕰 🕛 🕧 🕐 🕜 🕑 🕝 🕒 🕞 🕓 🕟 🕔 🕠 🕕 🕡 🕖 🕢 🕗 🕣 🕘 🕤 🕙 🕥 🕚 🕦 🌑 🌒 🌓 🌔 🌕 🌖 🌗 🌘 🌙 🌚 🌛 🌜 🌡 ☀ 🌝 🌞 🪐 ⭐ 🌟 🌠 🌌 ☁ ⛅ ⛈ 🌤 🌥 🌦 🌧 🌨 🌩 🌪 🌫 🌬 🌀 🌈 🌂 ☂ ☔ ⛱ ⚡ ❄ ☃ ⛄ ☄ 🪋 🔥 💧 🌊","aktiv":"🎃 🎄 🎆 🎇 🧨 ✨ 🎈 🎉 🎊 🎋 🎍 🎎 🎏 🎐 🎑 🧧 🎀 🎁 🎗 🎟 🎫 🎖 🏆 🏅 🥇 🥈 🥉 ⚽ ⚾ 🥎 🏀 🏐 🏈 🏉 🎾 🥏 🎳 🏏 🏑 🏒 🥍 🏓 🏸 🥊 🥋 🥅 ⛳ ⛸ 🎣 🤿 🎽 🎿 🛷 🥌 🎯 🪀 🪁 🔫 🎱 🔮 🪄 🎮 🕹 🎰 🎲 🧩 🧸 🪅 🪩 🪆 ♠ ♥ ♦ ♣ ♟ 🃏 🀄 🎴 🎭 🖼 🎨 🧵 🪡 🧶 🪢","objekt":"👓 🕶 🥽 🥼 🦺 👔 👕 👖 🧣 🧤 🧥 🧦 👗 👘 🥻 🩱 🩲 🩳 👙 👚 🪭 👛 👜 👝 🛍 🎒 🩴 👞 👟 🥾 🥿 👠 👡 🩰 👢 🪮 👑 👒 🎩 🎓 🧢 🪖 ⛑ 📿 💄 💍 💎 🔇 🔈 🔉 🔊 📢 📣 📯 🔔 🔕 🎼 🎵 🎶 🎙 🎚 🎛 🎤 🎧 📻 🎷 🎺 🪊 🪗 🎸 🎹 🎻 🪕 🥁 🪘 🪇 🪈 🪉 📱 📲 ☎ 📞 📟 📠 🔋 🪫 🔌 💻 🖥 🖨 ⌨ 🖱 🖲 💽 💾 💿 📀 🧮 🎥 🎞 📽 🎬 📺 📷 📸 📹 📼 🔍 🔎 🕯 💡 🔦 🏮 🪔 📔 📕 📖 📗 📘 📙 📚 📓 📒 📃 📜 📄 📰 🗞 📑 🔖 🏷 🪙 💰 🪎 💴 💵 💶 💷 💸 💳 🧾 💹 ✉ 📧 📨 📩 📤 📥 📦 📫 📪 📬 📭 📮 🗳 ✏ ✒ 🖋 🖊 🖌 🖍 📝 🪌 💼 📁 📂 🗂 📅 📆 🗒 🗓 📇 📈 📉 📊 📋 📌 📍 📎 🖇 📏 📐 ✂ 🗃 🗄 🗑 🔒 🔓 🔏 🔐 🔑 🗝 🪍 🔨 🪓 ⛏ ⚒ 🛠 🗡 ⚔ 💣 🪃 🏹 🛡 🪚 🔧 🪛 🔩 ⚙ 🗜 ⚖ 🦯 🔗 ⛓‍💥 ⛓ 🪝 🧰 🧲 🪜 🪏 ⚗ 🧪 🧫 🧬 🔬 🔭 📡 💉 🩸 💊 🩹 🩼 🩺 🩻 🚪 🛗 🪞 🪟 🛏 🛋 🪑 🚽 🪠 🚿 🛁 🪤 🪒 🧴 🧷 🧹 🧺 🧻 🪣 🧼 🫧 🪥 🧽 🧯 🛒 🚬 ⚰ 🪦 ⚱ 🧿 🪬 🗿 🪧 🪪","symbol":"🏧 🚮 🚰 ♿ 🚹 🚺 🚻 🚼 🚾 🛂 🛃 🛄 🛅 ⚠ 🚸 ⛔ 🚫 🚳 🚭 🚯 🚱 🚷 📵 🔞 ☢ ☣ ⬆ ↗ ➡ ↘ ⬇ ↙ ⬅ ↖ ↕ ↔ ↩ ↪ ⤴ ⤵ 🔃 🔄 🔙 🔚 🔛 🔜 🔝 🛐 ⚛ 🕉 ✡ ☸ ☯ ✝ ☦ ☪ ☮ 🕎 🔯 🪯 ♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓ ⛎ 🔀 🔁 🔂 ▶ ⏩ ⏭ ⏯ ◀ ⏪ ⏮ 🔼 ⏫ 🔽 ⏬ ⏸ ⏹ ⏺ ⏏ 🎦 🔅 🔆 📶 🛜 📳 📴 ♀ ♂ ⚧ ✖ ➕ ➖ ➗ 🟰 ♾ ‼ ⁉ ❓ ❔ ❕ ❗ 〰 💱 💲 ⚕ ♻ ⚜ 🔱 📛 🔰 ⭕ ✅ ☑ ✔ ❌ ❎ ➰ ➿ 〽 ✳ ✴ ❇ © ® ™ 🫟 #⃣ *⃣ 0⃣ 1⃣ 2⃣ 3⃣ 4⃣ 5⃣ 6⃣ 7⃣ 8⃣ 9⃣ 🔟 🔠 🔡 🔢 🔣 🔤 🅰 🆎 🅱 🆑 🆒 🆓 ℹ 🆔 Ⓜ 🆕 🆖 🅾 🆗 🅿 🆘 🆙 🆚 🈁 🈂 🈷 🈶 🈯 🉐 🈹 🈚 🈲 🉑 🈸 🈴 🈳 ㊗ ㊙ 🈺 🈵 🔴 🟠 🟡 🟢 🔵 🟣 🟤 ⚫ ⚪ 🟥 🟧 🟨 🟩 🟦 🟪 🟫 ⬛ ⬜ ◼ ◻ ◾ ◽ ▪ ▫ 🔶 🔷 🔸 🔹 🔺 🔻 💠 🔘 🔳 🔲","flagge":"🏁 🚩 🎌 🏴 🏳 🏳‍🌈 🏳‍⚧ 🏴‍☠ 🏴󠁧󠁢󠁥󠁮󠁧󠁿 🏴󠁧󠁢󠁳󠁣󠁴󠁿 🏴󠁧󠁢󠁷󠁬󠁳󠁿"};
@@ -11010,7 +11011,7 @@ function classifyRaw(raw) {
   const iosMark = /^\s*\u200e/.test(t);
   t = t.replace(INVIS, '').replace(/[\u202f\u00a0]/g, ' ').trim();
   if (t === '' || t === 'null') return { type: 'system', text: '' };
-  if (RE_DELETED.test(t)) return { type: 'deleted', text: '' };
+  if (RE_DELETED.test(t) || /^\[gelöscht\]$/i.test(t)) return { type: 'deleted', text: '' };
   if (/^<[^<>\n]{1,80}>$/.test(t)) return { type: 'media', text: '' };
   if (iosMark) return { type: RE_MEDIAWORD.test(t) ? 'media' : 'system', text: '' };
   const nl = t.indexOf('\n');
@@ -11028,6 +11029,8 @@ function classifyRaw(raw) {
       eo Emoticon, ej Emoji
    ===================================================================== */
 const RE_WS = /\s+/y;
+const RE_ANON = /\[(?:anonymisiert|Name|Nummer|Link|Bild|gelöscht)[^\[\]\n]{0,40}\]/yi;
+const RE_ANON_G = new RegExp(RE_ANON.source, 'gi');
 const RE_URL = /(?:https?:\/\/|www\.)[^\s]+/yi;
 const RE_MAIL = /[\w.+-]+@[\w-]+(?:\.[\w-]+)+/y;
 const RE_EMOJI = /(?:\p{Regional_Indicator}{2}|[#*0-9]\uFE0F?\u20E3|\p{Extended_Pictographic}(?:\uFE0F|\p{Emoji_Modifier})?(?:\u200D\p{Extended_Pictographic}(?:\uFE0F|\p{Emoji_Modifier})?)*[\u{E0020}-\u{E007F}]*)/yu;
@@ -11093,6 +11096,7 @@ function tokenize(text) {
   while (i < n) {
     let s;
     if ((s = at(RE_WS))) { i += s.length; continue; }
+    if ((s = at(RE_ANON))) { push({ k: 'x', id: 'anon' }, s); continue; }
     const prev = i > 0 ? text[i - 1] : undefined;
     if ((s = at(RE_URL))) {
       s = s.replace(/[.,;:!?)\]'"\u00bb\u201c\u201d]+$/, '');
@@ -11259,7 +11263,7 @@ function analyse(chat, person, hideStop) {
   for (const e of msgs) {
     let w = 0, hasEmoji = false;
     for (const t of e.tk) {
-      if (t.k === 'w' || t.k === 'n' || t.k === 'a') w++;
+      if (t.k === 'w' || t.k === 'n' || t.k === 'a' || t.k === 'x') w++;
       if (t.k === 'w') {
         const lw = t.s.replace(/^[@#]/, '').toLowerCase();
         if (!(hideStop && STOP.has(lw))) inc(words, lw);
@@ -11267,8 +11271,9 @@ function analyse(chat, person, hideStop) {
       else if (t.k === 'eo') { inc(emoticons, t.sub); emoticonTotal++; }
     }
     if (hasEmoji) msgWithEmoji++;
-    const chars = Array.from(e.text.replace(/\s/g, '')).length;
-    const letters = (e.text.match(/\p{L}/gu) || []).length;
+    const plain = e.text.replace(RE_ANON_G, '');
+    const chars = Array.from(plain.replace(/\s/g, '')).length;
+    const letters = (plain.match(/\p{L}/gu) || []).length;
     A.nWords += w; A.nChars += chars; A.nLetters += letters;
     wpm.push(w); cpm.push(chars);
     lenHist[w <= 1 ? 0 : w <= 5 ? 1 : w <= 10 ? 2 : w <= 20 ? 3 : 4]++;
@@ -11538,7 +11543,7 @@ function chatName(base, senders) {
   if (senders.length > 3) who += ' + ' + (senders.length - 3) + ' weitere';
   const b = (base || '').trim();
   const plain = !b || /^chat$/i.test(b) || senders.some(x => x.toLowerCase() === b.toLowerCase());
-  let name = plain ? who : who + ', ' + b;
+  let name = plain ? who : senders.length > 3 ? b : who + ', ' + b;
   const taken = (v) => S.chats.some(c => c.name === v);
   if (taken(name)) { let n = 2; while (taken(name + ' (' + n + ')')) n++; name += ' (' + n + ')'; }
   return name;
@@ -12048,11 +12053,12 @@ function ngTokens(e, signs) {
   for (const t of e.tk) {
     if (t.k === 'w') out.push({ f: t.s.replace(/^[@#]/, '').toLowerCase(), i: t.i, j: t.j });
     else if (t.k === 'n' || t.k === 'a') out.push({ f: t.s.toLowerCase(), i: t.i, j: t.j });
+    else if (t.k === 'x') out.push({ f: t.s.toLowerCase(), i: t.i, j: t.j, bnd: true });
     else if (signs && t.k !== 'u') out.push({ f: t.k === 'ej' ? showEmoji(t.base) : (t.sub || t.s), i: t.i, j: t.j });
   }
   return (e[slot] = out);
 }
-const gramAt = (tk, a, n) => { let g = tk[a].f; for (let b = 1; b < n; b++) g += ' ' + tk[a + b].f; return g; };
+const gramAt = (tk, a, n) => { if (tk[a].bnd) return null; let g = tk[a].f; for (let b = 1; b < n; b++) { if (tk[a + b].bnd) return null; g += ' ' + tk[a + b].f; } return g; };
 function corpusOf(col) {
   const c = col.c;
   c.NG = c.NG || new Map();
@@ -12063,7 +12069,7 @@ function corpusOf(col) {
       if (e.type !== 'text' || (col.person && e.sender !== col.person)) continue;
       for (const x of ngTokens(e, false)) { words.set(x.f, (words.get(x.f) || 0) + 1); seq.push(x.f); }
       const tk = ngTokens(e, NG.signs);
-      for (let a = 0; a + NG.n <= tk.length; a++) { const g = gramAt(tk, a, NG.n); grams.set(g, (grams.get(g) || 0) + 1); }
+      for (let a = 0; a + NG.n <= tk.length; a++) { const g = gramAt(tk, a, NG.n); if (g !== null) grams.set(g, (grams.get(g) || 0) + 1); }
     }
     let hapax = 0;
     for (const v of words.values()) if (v === 1) hapax++;
@@ -12248,7 +12254,7 @@ function rowsNachrichten() {
       const tail = [e.gap !== null ? Math.round(e.gap / 1000) : '', prev ? (prev.sender !== e.sender ? 'ja' : 'nein') : '', SEQ[seqOf(c, e)]];
       if (e.type !== 'text') { rows.push(base.concat([e.type === 'media' ? 'Anhang' : 'gelöscht', '', '', '', '', '', '', '', '', '', '', '']).concat(tail)); return; }
       let w = 0, ej = 0, eo = 0;
-      for (const t of e.tk) { if (t.k === 'w' || t.k === 'n' || t.k === 'a') w++; else if (t.k === 'ej') ej++; else if (t.k === 'eo') eo++; }
+      for (const t of e.tk) { if (t.k === 'w' || t.k === 'n' || t.k === 'a' || t.k === 'x') w++; else if (t.k === 'ej') ej++; else if (t.k === 'eo') eo++; }
       const I = e.info;
       rows.push(base.concat(['Text', e.text, w, Array.from(e.text.replace(/\s/g, '')).length, ej, eo]).concat(lab(I.start), lab(I.end), lab(I.endSkip)).concat(tail));
     });
